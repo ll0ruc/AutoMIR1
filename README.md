@@ -73,7 +73,7 @@ It consists of data collected from various medical online websites, encompassing
 
 <p align="center">
     <a>
-        <img src="./images/cmirb.png" alt="CMIRB" width="60%" height="60%" border="10" />
+        <img src="./images/cmirb.png" alt="CMIRB" width="40%" height="20%" border="5" />
     </a>
 </p>
 
