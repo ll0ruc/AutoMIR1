@@ -4,8 +4,8 @@
     <a href="https://arxiv.org/abs/2410.20050">
         <img src="https://img.shields.io/badge/arXiv-2410.20050-B31B1B.svg?style=plastic&logo=arxiv" alt="arXiv">
     </a>
-    <a href="https://r2med.github.io/">
-        <img src="https://img.shields.io/badge/Website-R2MED-purple?style=plastic&logo=Google%20chrome" alt="Website">
+    <a href="https://ll0ruc.github.io/automir.github.io/">
+        <img src="https://img.shields.io/badge/Website-AUTOMIR-purple?style=plastic&logo=Google%20chrome" alt="Website">
     </a>
     <a href="https://huggingface.co/CMIRB" target="_blank">
         <img src="https://img.shields.io/badge/Dataset-Download-yellow?style=plastic&logo=huggingface" alt="Download the EmbodiedAgentInterface Dataset from Hugging Face">
