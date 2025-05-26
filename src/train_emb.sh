@@ -1,0 +1,21 @@
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5 torchrun --standalone --nnodes=1 --nproc_per_node 6 -m train_emb \
+  --output_dir ***/outputs/qwen/BGE-FT \
+  --model_name_or_path ***/BAAI/bge-large-zh-v1.5 \
+  --train_data ***/train_data/qwen/emb_train_data.jsonl \
+  --learning_rate 1e-5 \
+  --num_train_epochs 1 \
+  --deepspeed ./config/ds_config.json \
+  --per_device_train_batch_size 4 \
+  --gradient_accumulation_steps 1 \
+  --dataloader_drop_last True \
+  --normlized True \
+  --temperature 0.02 \
+  --query_max_len 512 \
+  --passage_max_len 512 \
+  --negatives_cross_device \
+  --train_group_size 8 \
+  --logging_steps 10 \
+  --logging_strategy steps \
+  --save_steps 1000 \
+  --save_strategy steps \
+  --query_instruction_for_retrieval "为这个句子生成表示以用于检索相关文章："

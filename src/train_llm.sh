@@ -1,0 +1,42 @@
+#!/bin/bash
+echo "Program start"
+
+CUDA_VISIBLE_DEVICES=0,1,2,3,4,5 torchrun --nproc_per_node 6 train_llm.py \
+    --model_type auto \
+    --model_name_or_path ***/Qwen/Qwen2-7B-Instruct \
+    --train_file_dir ***/train_data/qwen/llm_train_data.jsonl \
+    --per_device_train_batch_size 2 \
+    --per_device_eval_batch_size 4 \
+    --do_train \
+    --template_name qwen \
+    --use_peft True \
+    --max_train_samples -1 \
+    --model_max_length 1024 \
+    --num_train_epochs 1 \
+    --learning_rate 1e-5 \
+    --warmup_ratio 0.05 \
+    --weight_decay 0.05 \
+    --logging_strategy steps \
+    --logging_steps 2 \
+    --eval_steps 50 \
+    --evaluation_strategy steps \
+    --save_steps 5000 \
+    --save_strategy steps \
+    --save_total_limit 13 \
+    --gradient_accumulation_steps 2 \
+    --preprocessing_num_workers 4 \
+    --output_dir ***/outputs/qwen/lora/qwen-sft \
+    --overwrite_output_dir \
+    --ddp_timeout 30000 \
+    --logging_first_step True \
+    --target_modules all \
+    --lora_rank 8 \
+    --lora_alpha 16 \
+    --lora_dropout 0.05 \
+    --torch_dtype float16 \
+    --fp16 \
+    --device_map auto \
+    --report_to wandb \
+    --ddp_find_unused_parameters False \
+    --gradient_checkpointing True \
+    --deepspeed ./config/deepspeed_zero_stage2_config.json
