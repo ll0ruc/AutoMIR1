@@ -45,7 +45,7 @@ Note that the code in this repo runs under **Linux** system. We have not tested 
 1. **Clone this repository:**
 
     ```bash
-    git clone https://github.com/ll0ruc/AutoMIR1.git
+    git clone https://github.com/ll0ruc/AutoMIR.git
     cd automir
     ```
 
@@ -172,7 +172,7 @@ We evaluate 10+ representative retrieval models of diverse sizes and architectur
 | [bge-large-zh-v1.5](https://huggingface.co/BAAI/bge-large-zh-v1.5) | 1024 | **55.40** | 58.61 | 44.26 | 71.71 | 59.6  | 42.57 | 47.73 | 73.33 | 67.13 | 43.27 | 45.79 |
 | [peg](https://huggingface.co/TownsWu/PEG) | 1024 | **57.46** | 52.78 | 51.68 | 77.38 | 60.96 | 44.42 | 49.3  | 82.56 | 70.38 | 44.74 | 40.38 |
 | [HyDE (qwen+bge)](https://github.com/texttron/hyde) | 1024 | **56.62** | 64.39 | 52.73 | 73.98 | 57.27 | 38.52 | 47.11 | 74.32 | 73.07 | 46.16 | 38.68 |
-| [SL-HyDE (qwen+bge)](https://github.com/ll0ruc/AutoMIR1) | 1024 | **59.38** | 71.49 | 60.96 | 75.34 | 58.58 | 39.07 | 50.13 | 76.95 | 73.81 | 46.78 | 40.71 |
+| [SL-HyDE (qwen+bge)](https://github.com/ll0ruc/AutoMIR) | 1024 | **59.38** | 71.49 | 60.96 | 75.34 | 58.58 | 39.07 | 50.13 | 76.95 | 73.81 | 46.78 | 40.71 |
 
 
 ## 📜Reference
